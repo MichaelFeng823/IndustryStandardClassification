@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1058</width>
+    <height>693</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow
+{
+	background-color:&quot;#1fab89&quot;;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="backgroundwidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">#backgroundwidget{
+	border-image: url(:/pic/image/1.jpg);
+	border-radius:15px;
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>15</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+	border: 1px solid &quot;#62d2a2&quot;;
+	border-radius:5px;
+	margin-top:2ex;
+	font:bold 24px;
+	background-color: rgba(255,255,255,50);
+}
+ 
+QGroupBox::title
+{
+	color: &quot;#9df3c4&quot;;
+	subcontrol-origin:margin;
+	subcontrol-position:top center;	
+	padding:0 3px;
+}
+QTreeWidget
+{
+	background-color: rgba(255,255,255,0);
+	border:none;
+}
+QScrollBar:vertical{
+	background-color:rgba(255,255,255,0);
+	border:none;
+}
+/*滚动条上⾯和下⾯区域样式*/
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical
+{
+	background-color:rgba(255,255,255,30);
+	border:none
+}
+/*向上箭头样式*/
+QScrollBar::sub-line:vertical
+{
+	background:rgba(255,255,255,0)
+}
+/*向下箭头样式*/
+QScrollBar::add-line:vertical
+{
+	background:rgba(255,255,255,0)
+}
+
+</string>
+        </property>
+        <property name="title">
+         <string>层级可视化</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <widget class="QTreeWidget" name="treeWidget">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>90</y>
+           <width>461</width>
+           <height>531</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+
+</string>
+         </property>
+         <attribute name="headerVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="headerStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </column>
+        </widget>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+	border: 1px solid &quot;#62d2a2&quot;;
+	border-radius:5px;
+	margin-top:2ex;
+    font:bold 24px;
+	background-color: rgba(255,255,255,50);
+}
+ 
+QGroupBox::title
+{
+	color: &quot;#9df3c4&quot;;
+	subcontrol-origin:margin;
+	subcontrol-position:top center;	
+	padding:0 3px;
+	
+}
+
+QPushButton
+{
+	color:rgb(0,0,0);
+	background-color: &quot;#9df3c4&quot;;
+	border:3px solid  &quot;#1fab89&quot;;
+	font:bold 14px;
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	color:rgb(0,0,0);
+	background-color: &quot;#1fab89&quot;;
+	border:3px solid  &quot;#1fab89&quot;;
+	font:bold 14px;
+	border-radius:5px;
+}
+QLineEdit
+{
+	color:rgb(0,0,0);
+	background-color: &quot;#9df3c4&quot;;
+	border:3px solid  &quot;#1fab89&quot;;
+	font:bold 14px;
+	border-radius:5px;
+}
+</string>
+        </property>
+        <property name="title">
+         <string>操作区</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <widget class="QPushButton" name="ImportRootButton">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>40</y>
+           <width>140</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>导入一级目录</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ImportSonButton">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>40</y>
+           <width>140</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>导入子级目录</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>100</y>
+           <width>251</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>251</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>251</width>
+           <height>41</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>100</y>
+           <width>81</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>81</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>81</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>检索</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>481</width>
+           <height>1</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: &quot;#62d2a2&quot;;</string>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
